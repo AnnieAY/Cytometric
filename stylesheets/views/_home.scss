@@ -1,0 +1,49 @@
+.row{
+	margin: 0;
+	padding: 0;
+}
+
+.text-center{
+	text-align: center;
+}
+
+// LOGIN
+
+#login{
+	background-image: url(../assets/images/fondo3.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	.col-md-4{
+		margin-top: 12%;
+		.recuadro-login{
+			border-radius: 13px;
+			border: 1px solid gray;
+			background-color: white;
+			.logo{
+				img{
+					width: 55%;
+					margin: 10% auto;
+				}
+			}
+			form{
+				.form-control{
+					display: inline-block;
+				}
+				input{
+					width: 250px;
+					margin-bottom: 5%;
+				}	
+				button{
+					background-color: #3498db;
+					border-radius: 12px;
+					padding: 1% 5%;
+					margin: 5%;
+					color: white;
+					font-weight: bold;
+					border: 1px solid #2980b9;
+				}			
+			}
+		}
+	}
+}

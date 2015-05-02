@@ -1,0 +1,232 @@
+// //Colocar aquí clases utilitarias para todo el sitio. Por ejemplo: márgenes, alineación de texto y color de texto.
+ 
+.container-fluid{
+	padding: 0
+}
+
+body{
+	font-family: "MuseoSans";
+}
+.row{
+	margin: 0;
+	padding: 0;
+}
+
+// section{
+// 	padding: 7% 0;
+// }
+
+// // TEXT COLORS
+
+.text-gray{ 
+	color:#989898; 
+} 
+.text-dark-gray{
+	color:#4D4545;
+}
+.text-white{ 
+	color:white; 
+} 
+.text-orange{ 
+	color:#FF6A49; 
+} 
+.text-yellow{  
+	color:#FFC200; 
+} 
+.text-light-blue{ 
+	color:#58C6E7; 
+}
+.text-icolor{
+	color:#28C5E6;
+} 
+.text-tomato{
+	color:tomato !important;
+}
+h1{
+  text-align: center;
+  font-size: 37px;
+  letter-spacing:0;
+  line-height: 1;
+  font-family: NeutraText-DemiAlt !important;
+}  
+h2{
+  text-align: center;
+	font-size: 33px;
+	letter-spacing:0;
+  line-height: 1;
+  font-family: NeutraText-DemiAlt !important;
+}
+h3{
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+  font-size: 27px;
+}
+h4{
+  font-family: NeutraText-LightAlt !important;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  font-size: 25px;
+}
+h5{
+  font-family: NeutraText-LightAlt !important;
+  line-height: 1.2;
+  font-size: 20px;
+  margin-bottom: 2%;
+  margin-top: 0;
+}
+
+// FONT
+
+.neutra{
+  font-family: NeutraText-DemiAlt !important;
+}
+
+
+// BACKGROUND COLOR
+
+.bg-gray{ 
+	background-color:#9E9D9D; 
+} 
+.bg-light-gray{ 
+  background-color:#E8E8E8; 
+} 
+.bg-white{ 
+	background-color:white; 
+} 
+.bg-icolor{
+  background-color:#28C5E6;
+} 
+.bg-green{
+  background-color: #77D248;
+}
+.bg-form{
+  background-color: #ecf0f1;
+}
+
+// TEXT ALIGN
+
+.text-left {
+  text-align: left; 
+}
+
+.text-right {
+  text-align: right; 
+}
+
+.text-center {
+  text-align: center; 
+}
+
+.text-justify {
+  text-align: justify; 
+}
+
+// TEXT WEIGHT
+
+@for $i from 3 through 8{
+  .weight-#{$i*100}{
+    font-weight: 100 * $i
+  }
+}
+
+// // MARGIN && PADDING
+
+@mixin margin($margin, $value){
+  margin-#{$margin}: $value;
+}
+
+@for $i from 1 through 12 {
+  @each $margin in top, left, bottom, right {
+    .margin-#{$margin}-#{$i}{
+      @include margin($margin, 1% * $i) 
+    }
+  }
+}
+
+@mixin padding($padding, $value){
+  padding-#{$padding}: $value;
+}
+
+@for $i from 0 through 14 {
+  @each $padding in top, left, bottom, right {
+    .p-#{$padding}-#{$i}{
+      @include padding($padding, 1% * $i) 
+    }
+  }
+}
+
+// BUTTON STYLE
+
+.btn-home-crea{
+  padding: 2.5% 10%;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.btn-tomato{
+	background-color:tomato;
+	border-color: tomato;
+	color: white;
+}
+.btn-gray{
+	background-color: gray;
+	border-color: gray;
+	color: white;
+}
+.btn-transparent{
+  background-color: transparent;
+  border: 3px solid white !important;
+  color:white;
+}
+.btn-tomato-white{ 
+  background-color: white; 
+  border:2px solid tomato; 
+  color: tomato;
+}
+
+// BORDER RADIUS
+
+.border-radius{
+	border-radius: 50%;
+}
+
+.border-bottom{
+  padding-bottom: 4%;
+  border-bottom: 2px dashed white;
+}
+
+// FONTS:
+
+@font-face {
+  font-family: MuseoSans;
+  src: url(../fonts/section-fonts/MuseoSans.otf);
+}
+@font-face {
+  font-family: MuseoSans-uno;
+  src: url(../fonts/section-fonts/MuseoSans-uno.otf);
+}
+
+@font-face {
+  font-family: NeutraText-LightAlt;
+  src: url(../fonts/header-fonts/NeutraText-LightAlt.otf);
+}
+
+@font-face {
+  font-family: NeutraText-BoldAlt;
+  src: url(../fonts/header-fonts/NeutraText-BoldAlt.otf);
+}
+@font-face {
+  font-family: NeutraText-DemiAlt;
+  src: url(../fonts/header-fonts/NeutraText-DemiAlt.otf);
+}
+
+
+// POSITION
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
